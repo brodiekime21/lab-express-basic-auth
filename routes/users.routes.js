@@ -33,7 +33,7 @@ router.post('/signup', (req,res,next)=>{
     })
     .then((userFromDB) => {
       console.log('Newly created user is: ', userFromDB);
-      res.redirect('/')
+      res.redirect('/users/login')
     })
     .catch(error => next(error));
 
